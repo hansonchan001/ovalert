@@ -1,0 +1,18 @@
+ovalert
+======
+11:45 am 13/2/2023
+a rpi based alarm system that controls with API
+
+Installation
+------------
+
+Fast install:
+
+::
+
+    pip install ovalert
+
+
+
+    
+    
