@@ -47,7 +47,7 @@ def index():
 @app.route('/led/<string:level>')
 def led(level):
 	led = 2
-	led_event .clear()
+	led_event.clear()
 	def blink(level,led_event):
 		while (1):
 			GPIO.output(led, int(level))
@@ -88,4 +88,4 @@ def alert(level):
 		return "stopped ringing"
 
 if __name__ == "__main__":
-    app.run(host='10.104.80.77', port=5000)
+    app.run(host='0.0.0.0', port=5000)

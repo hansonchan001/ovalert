@@ -1,40 +1,52 @@
-from setuptools import setup
-
-# reading long description from file
-with open('DESCRIPTION.txt') as file:
-    long_description = file.read()
-
-
-# specify requirements of your package here
-REQUIREMENTS = ['pygame', 'flask', 'threading', 'RPI.GPIO', 'time']
-
-# some more details
-CLASSIFIERS = [
-    'Development Status :: 4 - Beta',
-    'Intended Audience :: Developers',
-    'Topic :: Internet',
-    'License :: OSI Approved :: MIT License',
-    'Programming Language :: Python',
-    'Programming Language :: Python :: 2',
-    'Programming Language :: Python :: 2.6',
-    'Programming Language :: Python :: 2.7',
-    'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.3',
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
-    ]
-
-# calling the setup function 
-setup(name='ovalert',
-      version='1.0.0',
-      description='An alarm system for system TRACY ',
-      long_description=long_description,
-      url='www.google.com',
-      author='HSC',
-      author_email='hansonchan@ophyllaventures.com',
-      license='MIT',
-      packages=['alert'],
-      classifiers=CLASSIFIERS,
-      install_requires=REQUIREMENTS,
-      keywords='alarm rpi'
-      )
+import setuptools
+ 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+ 
+setuptools.setup(
+    # Here is the module name.
+    name="ovalert",
+ 
+    # version of the module
+    version="0.0.2",
+ 
+    # Name of Author
+    author="Hanson Chan",
+ 
+    # your Email address
+    author_email="hansonchan@ophyllaventures.com",
+ 
+    # #Small Description about module
+    # description="adding number",
+ 
+    # long_description=long_description,
+ 
+    # Specifying that we are using markdown file for description
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+ 
+    # Any link to reach this module, ***if*** you have any webpage or github profile
+    # url="https://github.com/username/",
+    packages=setuptools.find_packages(),
+ 
+ 
+    # if module has dependencies i.e. if your package rely on other package at pypi.org
+    # then you must add there, in order to download every requirement of package
+ 
+ 
+ 
+    #     install_requires=[
+    #      "package1",
+    #    "package2",
+    #    ],
+ 
+ 
+    license="MIT",
+ 
+    # classifiers like program is suitable for python3, just leave as it is.
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
